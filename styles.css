@@ -1,0 +1,283 @@
+
+/*/////////////////////////////////////////
+////// Main Styles
+/////////////////////////////////////////*/
+
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #111;
+  background: url('svgs/background.svg') #edeff0;
+}
+
+#container {
+  max-width: 960px;
+  background: #fff;
+  margin: 0 auto;
+}
+
+p {
+  max-width: 350px;
+  margin: 35px auto 0;
+  line-height: 2em;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: #EAAA7F;
+  font-weight: 700;
+  }
+  a:hover {
+    color: #BA8058;
+  }
+
+header {
+  padding-top: 10px;
+}
+  header nav {
+    padding-bottom: 50px;
+    text-align: left;
+  }
+  header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  header nav ul li {
+    transition: transform .3s ease;
+  }
+
+  header nav ul li:hover {
+  transform: scale(1.1);
+}
+
+  header li {
+    width: 90px;
+  }
+
+  header h1 {
+    line-height: 1em;
+  }
+
+main {
+  padding-top: 50px;
+}
+  main h2 {
+  font-size: 28px;
+}
+  main ul {
+    padding: 0;
+  }
+    main li {
+      display: inline-block;
+      color: #ba8058;
+      margin-right: 20px;
+    }
+      main li img {
+        margin-bottom: 15px;
+      }
+      main li span {
+        margin-left: -40px;
+      }
+      main li:last-child {
+        margin-right: 0;
+      }
+
+
+footer {
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 30px;
+  color: #ba8058;
+}
+
+.logo {
+	height: 120px;
+	width: 140px;
+}
+
+.mobile-logo-text {
+	display: block;
+	color:	#EAAA7F;
+}
+
+.st1 {
+	display: none;
+}
+
+.heart,
+.location,
+.contact {
+  width: 25%;
+}
+
+header nav ul li a .st0 {
+    fill: #EAAA7F;
+}
+
+
+/*/////////////////////////////////////////
+////// Keyframes
+/////////////////////////////////////////*/
+
+
+ @keyframes pulse {
+  55% {
+    transform: scale(.7);
+  }
+  75% {
+    transform: scale(.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes paw-pulse {
+ 55% {
+   transform: scale(1);
+ }
+ 75% {
+   transform: scale(1.17);
+ }
+ 100% {
+   transform: scale(1.02);
+ }
+}
+
+
+/*/////////////////////////////////////////
+////// Animation.
+/////////////////////////////////////////*/
+
+
+.heart path,
+.location path,
+.contact path {
+  fill: #BA8058;
+  transform-origin: 50% 50%;
+  animation: pulse .4s ease-in;
+  animation-delay: .8s;
+}
+
+.logo .toe-1  {
+  transform-origin: 50% 50%;
+  animation: paw-pulse 1.2s ease-out;
+  animation-delay: 1.4s;
+}
+
+.logo .toe-2  {
+  transform-origin: 50% 50%;
+  animation: paw-pulse 1.2s ease-out;
+  animation-delay: 1.6s;
+}
+
+.logo .toe-3  {
+  transform-origin: 50% 50%;
+  animation: paw-pulse 1.2s ease-out;
+  animation-delay: 1.8s;
+}
+
+
+/*/////////////////////////////////////////
+////// Menu icon hover state.
+/////////////////////////////////////////*/
+
+
+a .heart path,
+a .location path,
+a .contact path {
+  transition: transform 0.3s ease;
+}
+
+a:hover .heart path,
+a:hover .location path,
+a:hover .contact path {
+  transform: rotate(360deg);
+  fill: #BA8058;
+}
+
+
+/*/////////////////////////////////////////
+////// Dogs
+/////////////////////////////////////////*/
+
+
+.dog-1,
+.dog-2,
+.dog-3,
+.dog-4 {
+  width: 170px;
+  height: 170px;
+  margin-bottom: 15px;
+}
+
+.dog-1 .dog-1-eye,
+.dog-2 .dog-2-eye,
+.dog-3 .dog-3-eye,
+.dog-4 .dog-4-eye,
+.dog-1 .dog-1-nose,
+.dog-2 .dog-2-nose,
+.dog-3 .dog-3-nose,
+.dog-4 .dog-4-nose   {
+  fill:#2D3339;
+}
+
+.dog-1 .dog-1-face,
+.dog-2 .dog-2-face,
+.dog-3 .dog-3-face,
+.dog-4 .dog-4-face   {
+  fill:#FBFEFF;
+}
+
+.dog-3 .dog-3-eyebrow,
+.dog-4 .dog-4-eyebrow,
+.dog-4 .dog-4-ear  {
+  fill:#BA8058;
+}
+
+.dog-1 .dog-1-eyebrow {
+  fill: #EAAA7F;
+}
+
+.dog-2 .dog-2-eyebrow {
+  fill: #F4C6A6;
+}
+
+.dog-1 .dog-1-coat {
+  fill: #b30000;
+}
+
+.dog-2 .dog-2-coat {
+  fill: #f4d3bd;
+}
+
+.dog-3 .dog-3-coat {
+  fill: #64381b;
+}
+
+.dog-4 .dog-4-coat {
+  fill: #a0a6ac;
+}
+
+
+/*/////////////////////////////////////////
+////// Media Queries
+/////////////////////////////////////////*/
+
+
+@media (min-width: 425px) {
+	.mobile-logo-text {
+		display: none;
+}
+
+	.st1 {
+		display: block;
+}
+
+}
